@@ -1,0 +1,275 @@
+<html ng-app="ionicApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title>VikingPost</title>
+    <meta name="description" content="My Parse App">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/lib/ionic/css/ionic.css">
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+  <ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-nav-view></ion-nav-view><br /><br />
+
+  <script id="templates/tabs.html" type="text/ng-template">
+    <ion-tabs class="tabs-icon-top tabs-dark">
+
+      <ion-tab title="Home" icon="ion-home" href="#/tab/home">
+        <ion-nav-view name="home-tab"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="LogIn" icon="ion-ios-information" href="#/tab/about">
+        <ion-nav-view name="about-tab"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Links" icon="ion-ios-world" ui-sref="tabs.contact">
+        <ion-nav-view name="contact-tab"></ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+  </script>
+
+  <script id="templates/home.html" type="text/ng-template">
+  <ion-view view-title="We are ...">
+    <ion-content class="background" scroll="true">
+      <div class="card-red">
+        <div class="item card-red item-text-wrap">
+          <img src="etribe.png" width='80%'>
+        </div>
+      </div>
+      </br>
+
+      <div class="list card-dark">
+      <div class="item item-avatar">
+      <img src="young2.jpg">
+      <h2>Crop Protection Experts</h2>
+      <p>For over 20 years</p>
+      </div>
+
+      <div class="item item-body">
+      <img class="full-image" src="young1.jpg">
+      <p>Lorem ipsum dolor</p>
+
+        <p>
+        <a href="#" class="subdued">1 Like</a>
+        <a href="#" class="subdued">5 Comments</a>
+        </p>
+        </div>
+
+        <div class="item tabs tabs-secondary tabs-icon-left">
+          <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Like
+          </a>
+          <a class="tab-item" href="#/tab/facts">
+          <i class="icon ion-chatbox"></i>
+          FAQs
+          </a>
+          <a class="tab-item" href="#/tab/facts2">
+          <i class="icon ion-share"></i>
+          Post
+          </a>
+          </div>
+        </div>
+        </ion-list>
+
+
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <script id="templates/facts.html" type="text/ng-template">
+  <ion-view view-title="Scroll the FAQ's">
+    <ion-content class="background2" scroll="true">
+    <div data-ng-controller="ExampleController">
+      <div class="card-dark">
+        <div class="item card-red item-text-wrap">
+          <div class="card">
+            <div class="item item-text-wrap">
+            <h1>Recent FAQs</h1>
+            <hr>
+            <ul id="list-posts">
+            List
+            <li>
+            <h3>  </h3>
+            </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+      <div class="item item-text-wrap">
+      <a class="button icon ion-home" href="#/tab/facts2"> Post a FAQ</a>
+      <a class="button icon ion-home" href="templates/browse.html"> Browse</a>
+      </div>
+      </div>
+          <a class="button icon ion-home" href="#/tab/home"> Home</a>
+          <a class="button button-royal icon icon-right ion-chevron-right" href="#/tab/facts2">About agriPUSH</a>
+        </p>
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <script id="templates/facts2.html" type="text/ng-template">
+  <ion-view view-title="Post your FAQ">
+    <ion-content class="background2" scroll="true">
+    <div data-ng-controller="ExampleController">
+      <div class="card-dark">
+        <div class="item card-red item-text-wrap">
+          <div class="card">
+          <form id="post-form">
+            <label class="item item-input ">
+            <span class="input-label">FAQ Title</span>
+            <input id="post-title" type="text">
+            </label><br>
+            <label class="item item-input ">
+            <span class="input-label">FAQ Content</span>
+            <input id="post-content" type="text">
+            </label>
+          <br>
+            <button class="button button-assertive">
+            <input id="post-submit" type="submit">
+            </button>
+          </form>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+      <div class="item item-text-wrap">
+      <a class="button icon ion-home" href="#/tab/facts"> Read other FAQs</a>
+      <a class="button icon ion-home" href="templates/browse.html"> Browse</a>
+      </div>
+      </div>
+          <a class="button icon ion-home" href="#/tab/home"> Home</a>
+          <a class="button button-energized icon icon-right ion-chevron-right" href="#/tab/facts2">About VikingPUSH</a>
+        </p>
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <script id="templates/about.html" type="text/ng-template">
+    <ion-view view-title="Log In or Sign Up">
+      <ion-content class="background2" scroll="true">
+      <div data-ng-controller="ExampleController">
+      <div class="card-dark">
+          <div class="item card-red item-text-wrap">
+            <h1>Login</h1>
+            <p>You only have to sign up the first time</p>
+            <p>If logged in your name will show up under the logout button</p>
+            <br />
+            <div><button id="logout">Log out HERE before leaving</button></div>
+
+            <div id="current-user"></div><br />
+
+            <form id="login">
+              <label class="item item-input item-stable">
+                <span class="input-label">UserName</span>
+                <input id="login-name" type="text">
+              </label><br>
+              <label class="item item-input item-stable">
+                <span class="input-label">Password</span>
+                <input id="login-password" type="password">
+              </label><br>
+              <button class="button button-stable">
+              <input id="login-submit" type="submit">
+              </button>
+            </form>
+            </div>
+            </div>
+            <br />
+
+          <div class="card-dark">
+            <div class="item card-red item-text-wrap">
+            <h1>SignUp</h1>
+            <p>Choose a user name and password</p>
+            <p>Make a note of both because they cannot be retrieved</p>
+            <div id="current-user"></div>
+              <form id="signup">
+                <label class="item item-input item-stable">
+                <span class="input-label">UserName</span>
+                <input id="signup-name" type="text">
+                </label><br>
+                <label class="item item-input item-stable">
+                <span class="input-label">Password</span>
+                <input id="signup-password" type="password">
+                </label><br>
+              <button class="button button-stable">
+              <input id="signup-submit" type="submit">
+              </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+        <div class="item item-text-wrap">
+        <a class="button icon ion-home" href="#/tab/facts2"> Post a FAQ</a>
+        </div>
+        </div>
+      </ion-content>
+      </ion-view>
+      </script>
+
+
+
+  <script id="templates/contact.html" type="text/ng-template">
+    <ion-view title="Contact">
+      <ion-content>
+      <div class="card">
+        <div class="item item-text-wrap">
+        <p></p>
+        <p></p>
+        <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item item-text-wrap">
+        <p></p>
+        <p></p>
+        <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item item-text-wrap">
+        <p></p>
+        <p></p>
+        <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item item-text-wrap">
+        <p></p>
+        <p></p>
+        <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item item-text-wrap">
+        The app developer
+        Tel: 082 456 7031
+        Email: chris@appfarm.co.za
+        </div>
+      </div>
+      </ion-content>
+    </ion-view>
+  </script>
+</body>
+
+</html>
