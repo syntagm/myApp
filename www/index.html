@@ -45,7 +45,7 @@
   </script>
 
   <script id="templates/home.html" type="text/ng-template">
-  <ion-view view-title="We are ...">
+  <ion-view view-title="We are the...">
     <ion-content class="background" scroll="true">
       <div class="card-red">
         <div class="item card-red item-text-wrap">
@@ -54,11 +54,10 @@
       </div>
       </br>
 
-      <div class="list card-dark">
+      <div class="list card-blue">
       <div class="item item-avatar">
-      <img src="young2.jpg">
-      <h2>Crop Protection Experts</h2>
-      <p>For over 20 years</p>
+      <img src="avatar.png">
+      Welcome onBoard
       </div>
 
       <div class="item item-body">
@@ -71,19 +70,19 @@
         </p>
         </div>
 
-        <div class="item tabs tabs-secondary tabs-icon-left">
-          <a class="tab-item" href="#/tab/browse">
-          <i class="icon ion-thumbsup"></i>
-          Browse
-          </a>
-          <a class="tab-item" href="#/tab/facts">
-          <i class="icon ion-chatbox"></i>
-          FAQs
-          </a>
-          <a class="tab-item" href="#/tab/facts2">
-          <i class="icon ion-share"></i>
-          Post
-          </a>
+          <div class="item tabs tabs-secondary tabs-icon-left">
+              <a class="tab-item" href="#/tab/browse">
+              <i class="icon ion-thumbsup"></i>
+              Browse
+              </a>
+              <a class="tab-item" href="#/tab/facts">
+              <i class="icon ion-chatbox"></i>
+              FAQs
+              </a>
+              <a class="tab-item" href="#/tab/facts2">
+              <i class="icon ion-share"></i>
+              Post
+              </a>
           </div>
         </div>
         </ion-list>
@@ -114,14 +113,23 @@
         </div>
       </div>
       <div class="card">
-      <div class="item item-text-wrap">
-      <a class="button icon ion-home" href="#/tab/facts2"> Post a FAQ</a>
-      <a class="button icon ion-home" href="templates/browse.html"> Browse</a>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+          <a class="tab-item" href="#/tab/browse">
+          <i class="icon ion-thumbsup"></i>
+          Browse
+          </a>
+          <a class="tab-item" href="#/tab/facts">
+          <i class="icon ion-chatbox"></i>
+          FAQs
+          </a>
+          <a class="tab-item" href="#/tab/facts2">
+          <i class="icon ion-share"></i>
+          Post
+          </a>
       </div>
       </div>
-          <a class="button icon ion-home" href="#/tab/home"> Home</a>
-          <a class="button button-royal icon icon-right ion-chevron-right" href="#/tab/facts2">About agriPUSH</a>
-        </p>
+      </div>
+
       </ion-content>
     </ion-view>
   </script>
@@ -151,14 +159,22 @@
         </div>
       </div>
       <div class="card">
-      <div class="item item-text-wrap">
-      <a class="button icon ion-home" href="#/tab/facts"> Read other FAQs</a>
-      <a class="button icon ion-home" href="templates/browse.html"> Browse</a>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+          <a class="tab-item" href="#/tab/browse">
+          <i class="icon ion-thumbsup"></i>
+          Browse
+          </a>
+          <a class="tab-item" href="#/tab/facts">
+          <i class="icon ion-chatbox"></i>
+          FAQs
+          </a>
+          <a class="tab-item" href="#/tab/facts2">
+          <i class="icon ion-share"></i>
+          Post
+          </a>
       </div>
       </div>
-          <a class="button icon ion-home" href="#/tab/home"> Home</a>
-          <a class="button button-energized icon icon-right ion-chevron-right" href="#/tab/facts2">About VikingPUSH</a>
-        </p>
+
       </ion-content>
     </ion-view>
   </script>
@@ -217,8 +233,19 @@
           </div>
         </div>
         <div class="card">
-        <div class="item item-text-wrap">
-        <a class="button icon ion-home" href="#/tab/facts2"> Post a FAQ</a>
+        <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#/tab/browse">
+            <i class="icon ion-thumbsup"></i>
+            Browse
+            </a>
+            <a class="tab-item" href="#/tab/facts">
+            <i class="icon ion-chatbox"></i>
+            FAQs
+            </a>
+            <a class="tab-item" href="#/tab/facts2">
+            <i class="icon ion-share"></i>
+            Post
+            </a>
         </div>
         </div>
       </ion-content>
@@ -276,11 +303,10 @@
   <script id="templates/browse.html" type="text/ng-template">
   <ion-view view-title="Browse">
     <ion-content class="background2" scroll="true">
-
         <div data-ng-controller="SliderController">
-          <div class="card-dark">
+          <div class="card-slider">
             <div class="item card-red item-text-wrap">
-            <ion-slide-box>
+            <ion-slide-box pager-click="navSlide(index)">
                 <ion-slide>
                     <img style="height: 100% width: 100%" src="img/tribe1.jpg">
                 </ion-slide>

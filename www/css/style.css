@@ -1,6 +1,6 @@
 /* Empty. Add your own CSS if you like */
 .background.scroll-content {
-    background: url("young1.jpg") no-repeat;
+    background: url("world.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     margin: auto;
@@ -8,7 +8,7 @@
     }
 
     .background2.scroll-content {
-        background: url("peaches_2.jpg") no-repeat;
+        background: url("world.jpg") no-repeat;
         background-size: cover;
         background-position: center;
         margin: auto;
@@ -38,6 +38,28 @@
           border-radius: 10px;
         }
 
+        .card-slider .item{
+              background: white;
+              opacity: 0.95;
+              filter: alpha(opacity=95); /* For IE8 and earlier */
+              font-size: 1.5em;
+              text-align: center;
+              margin: auto;
+              width: 95%;
+              border-radius: 5px;
+            }
+
+        .card-blue .item{
+              background: #000140;
+              opacity: 0.90;
+              filter: alpha(opacity=90); /* For IE8 and earlier */
+              font-size: 2.5em;
+              color: #ff0000;
+              text-align: center;
+              margin: auto;
+              width: 80%;
+              border-radius: 10px;
+            }
 
         .slider { height: 100%; text-align: center }
         .scroll { height: 100% }
