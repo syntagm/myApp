@@ -37,3 +37,7 @@
           width: 80%;
           border-radius: 10px;
         }
+
+
+        .slider { height: 100%; text-align: center }
+        .scroll { height: 100% }

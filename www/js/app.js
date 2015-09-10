@@ -43,11 +43,11 @@ var example = angular.module('ionicApp', ['ionic'])
         }
       }
     })
-    .state('tabs.navstack', {
-      url: "/navstack",
+    .state('tabs.browse', {
+      url: "/browse",
       views: {
         'about-tab': {
-          templateUrl: "templates/nav-stack.html"
+          templateUrl: "templates/browse.html"
         }
       }
     })
