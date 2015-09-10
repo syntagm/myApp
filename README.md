@@ -1,2 +1,0 @@
-# myApp
-model app
