@@ -3,10 +3,10 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.ionicframework.vikingpost615789"
-        version   = "1.0.0831">
+        id        = "za.co.syntagm.myapp"
+        version   = "1.0.0911">
 
-  <name>VikingPost</name>
+  <name>eTribe</name>
 
   <description>
         A synAPPS project.
