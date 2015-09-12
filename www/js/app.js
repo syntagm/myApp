@@ -143,9 +143,10 @@ function getPosts() {
           var title = results[i].get("title");
           var content = results[i].get("content");
           output += "<li>";
-          output += "<h3>"+title+"</h3>";
+          output += "<h2>"+title+"</h2>";
           output += "<p>"+content+"</p>";
           output += "</li>";
+          output += "<hr>";
           //console.log("Title:"+title)
       }
       $("#list-posts").html(output);
