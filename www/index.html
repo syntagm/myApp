@@ -37,7 +37,7 @@
         <ion-nav-view name="about-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Links" icon="ion-ios-world" ui-sref="tabs.contact">
+      <ion-tab title="Enterprises" icon="ion-ios-world" ui-sref="tabs.contact">
         <ion-nav-view name="contact-tab"></ion-nav-view>
       </ion-tab>
 
@@ -57,31 +57,38 @@
       <div class="list card-blue">
       <div class="item item-avatar">
       <img src="avatar.png">
-      Welcome onBoard
+      <h2><span style="color:red; font-size: 30px">Welcome onBoard.</span></h2>
       </div>
 
       <div class="item item-body">
-      <img class="full-image" src="young1.jpg">
-      <p>Lorem ipsum dolor</p>
+      <img class="full-image" src="img/young1.jpg"></br></br>
+      <ul class="list">
+        <li class="item">
+          <h3><span style="color:white">Explore this app by navigating around.</span></h3>
+        </li><br>
+        <li class="item">
+          <h3><span style="color:white">First sign-up and there-after log-in to be able to add your voice.</span></h3>
+        </li>
+      </ul>
 
         <p>
         <a href="#" class="subdued">1 Like</a>
-        <a href="#" class="subdued">5 Comments</a>
+        <a href="#" class="subdued">2 Comments</a>
         </p>
         </div>
 
-          <div class="item tabs tabs-secondary tabs-icon-left">
+          <div class="item tabs tabs-light tabs-icon-left">
               <a class="tab-item" href="#/tab/browse">
               <i class="icon ion-thumbsup"></i>
-              Browse
+              Values
               </a>
               <a class="tab-item" href="#/tab/facts">
               <i class="icon ion-chatbox"></i>
-              FAQs
+              TribalPost
               </a>
               <a class="tab-item" href="#/tab/facts2">
               <i class="icon ion-share"></i>
-              Post
+              OneVoice
               </a>
           </div>
         </div>
@@ -97,17 +104,17 @@
     <ion-content class="background2" scroll="true">
     <div data-ng-controller="ExampleController">
       <div class="card-dark">
-        <div class="item card-red item-text-wrap">
+        <div class="item card-postlist item-text-wrap">
           <div class="card">
             <div class="item item-text-wrap">
-            <h1>Recent FAQs</h1>
-            <hr>
-            <ul id="list-posts">
-            List
-            <li>
-            <h3>  </h3>
-            </li>
-            </ul>
+                <h1>Recent TribalPost</h1>
+                <hr>
+                <ul id="list-posts">
+                List
+                <li>
+                <h3> </h3>
+                </li>
+                </ul>
             </div>
           </div>
         </div>
@@ -120,11 +127,11 @@
           </a>
           <a class="tab-item" href="#/tab/facts">
           <i class="icon ion-chatbox"></i>
-          FAQs
+          TribalPost
           </a>
           <a class="tab-item" href="#/tab/facts2">
           <i class="icon ion-share"></i>
-          Post
+          OneVoice
           </a>
       </div>
       </div>
@@ -159,18 +166,18 @@
         </div>
       </div>
       <div class="card">
-      <div class="item tabs tabs-secondary tabs-icon-left">
+      <div class="item tabs tabs-light tabs-icon-left">
           <a class="tab-item" href="#/tab/browse">
           <i class="icon ion-thumbsup"></i>
-          Browse
+          Values
           </a>
           <a class="tab-item" href="#/tab/facts">
           <i class="icon ion-chatbox"></i>
-          FAQs
+          TribalPost
           </a>
           <a class="tab-item" href="#/tab/facts2">
           <i class="icon ion-share"></i>
-          Post
+          OneVoice
           </a>
       </div>
       </div>
@@ -233,18 +240,18 @@
           </div>
         </div>
         <div class="card">
-        <div class="item tabs tabs-secondary tabs-icon-left">
+        <div class="item tabs tabs-light tabs-icon-left">
             <a class="tab-item" href="#/tab/browse">
             <i class="icon ion-thumbsup"></i>
-            Browse
+            Values
             </a>
             <a class="tab-item" href="#/tab/facts">
             <i class="icon ion-chatbox"></i>
-            FAQs
+            TribalPost
             </a>
             <a class="tab-item" href="#/tab/facts2">
             <i class="icon ion-share"></i>
-            Post
+            OneVoice
             </a>
         </div>
         </div>
@@ -255,47 +262,26 @@
 
 
   <script id="templates/contact.html" type="text/ng-template">
-    <ion-view title="Contact">
-      <ion-content>
-        <div class="card">
-          <div class="item item-text-wrap">
-          <p></p>
-          <p></p>
-          <p></p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="item item-text-wrap">
-          <p></p>
-          <p></p>
-          <p></p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="item item-text-wrap">
-          <p></p>
-          <p></p>
-          <p></p>
-          </div>
-        </div>
-
-      <div class="card">
-        <div class="item item-text-wrap">
-        <p></p>
-        <p></p>
-        <p></p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="item item-text-wrap">
-        The app developer
-        Tel: 082 456 7031
-        Email: chris@appfarm.co.za
-        </div>
-      </div>
+    <ion-view title="Enterprises">
+    <ion-content class="background2" scroll="true">
+        <div data-ng-controller="SliderController">
+          <div class="card-slider">
+            <div class="item card-red item-text-wrap">
+            <ion-slide-box pager-click="navSlide(index)">
+                <ion-slide>
+                    <img style="height: 100% width: 100%" src="img/young3.jpg">
+                </ion-slide>
+                <ion-slide>
+                    <img style="height: 100% width: 100%" src="img/young4.jpg">
+                </ion-slide>
+                <ion-slide>
+                    <img style="height: 100% width: 100%" src="img/young5.jpg">
+                </ion-slide>
+                <ion-slide>
+                    <img style="height: 100% width: 100%" src="img/young6.jpg">
+                </ion-slide>
+            </ion-slide-box>
+        </div></div></div>
       </ion-content>
     </ion-view>
   </script>
@@ -308,13 +294,19 @@
             <div class="item card-red item-text-wrap">
             <ion-slide-box pager-click="navSlide(index)">
                 <ion-slide>
-                    <img style="height: 100% width: 80%" src="img/tribe1.jpg">
+                    <img style="height: 100% width: 100%" src="img/tribe1.jpg">
                 </ion-slide>
                 <ion-slide>
-                    <img style="height: 100% width: 60%" src="img/tribe2.jpg">
+                    <img style="height: 100% width: 100%" src="img/tribe2.jpg">
                 </ion-slide>
                 <ion-slide>
-                    <img style="height: 100% width: 40%" src="img/tribe3.jpg">
+                    <img style="height: 100% width: 100%" src="img/tribe3.jpg">
+                </ion-slide>
+                <ion-slide>
+                    <img style="height: 100% width: 100%" src="img/tribe4.jpg">
+                </ion-slide>
+                <ion-slide>
+                    <img style="height: 100% width: 100%" src="img/tribe5.jpg">
                 </ion-slide>
             </ion-slide-box>
         </div></div></div>

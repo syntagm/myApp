@@ -49,6 +49,17 @@
               border-radius: 5px;
             }
 
+            .card-postlist .item{
+                  background: white;
+                  opacity: 0.95;
+                  filter: alpha(opacity=95); /* For IE8 and earlier */
+                  font-size: 1.75em;
+                  text-align: center;
+                  margin: auto;
+                  width: 100%;
+                  border-radius: 5px;
+                }
+
         .card-blue .item{
               background: #000140;
               opacity: 0.90;
