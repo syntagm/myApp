@@ -16,7 +16,6 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="js/app.js"></script>
     <script src="cordova.js"></script>
-
 </head>
 
 <body>
@@ -44,104 +43,99 @@
     </ion-tabs>
   </script>
 
-  <script id="templates/home.html" type="text/ng-template">
+<script id="templates/home.html" type="text/ng-template">
   <ion-view view-title="We are the...">
     <ion-content class="background" scroll="true">
-      <div class="card-red">
-        <div class="item card-red item-text-wrap">
-          <img src="etribe.png" width='80%'>
-        </div>
-      </div>
-      </br>
+    </br>
+        <div class="list card-blue">
+          <div class="item item-avatar">
+          <img src="avatar.png">
+            <div class="item item-text-wrap">
+            <h2><span style="color:red; font-size: 1.5em">Welcome onBoard.</span></h2>
+            </div>
+          </div>
 
-      <div class="list card-blue">
-      <div class="item item-avatar">
-      <img src="avatar.png">
-      <div class="item item-text-wrap">
-      <h2><span style="color:red; font-size: 25px">Welcome onBoard.</span></h2>
-      </div>
-      </div>
+          <div class="item item-body">
+          <img class="full-image" src="img/young1.jpg"></br></br>
+            <ul class="list">
+            <li class="item">
+            <h3><span style="color:white">Explore this app by navigating around.</span></h3>
+            </li><br>
+            <li class="item">
+            <h3><span style="color:white">First sign-up and there-after log-in to be able to add your voice.</span></h3>
+            </li>
+            </ul>
 
-      <div class="item item-body">
-      <img class="full-image" src="img/young1.jpg"></br></br>
-      <ul class="list">
-        <li class="item">
-          <h3><span style="color:white">Explore this app by navigating around.</span></h3>
-        </li><br>
-        <li class="item">
-          <h3><span style="color:white">First sign-up and there-after log-in to be able to add your voice.</span></h3>
-        </li>
-      </ul>
-
-        <p>
-        <a href="#" class="subdued">1 Like</a>
-        <a href="#" class="subdued">2 Comments</a>
-        </p>
-        </div>
+            <p>
+            <a href="#" class="subdued">1 Like</a>
+            <a href="#" class="subdued">2 Comments</a>
+            </p>
+          </div>
 
           <div class="item tabs tabs-light tabs-icon-left">
+            <a class="tab-item" href="#/tab/browse">
+            <i class="icon ion-thumbsup"></i>
+            Values
+            </a>
+
+            <a class="tab-item" href="#/tab/facts">
+            <i class="icon ion-chatbox"></i>
+            TribalPost
+            </a>
+
+            <a class="tab-item" href="#/tab/facts2">
+            <i class="icon ion-share"></i>
+            OneVoice
+            </a>
+          </div>
+        </div>
+    </ion-list>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/facts.html" type="text/ng-template">
+  <ion-view view-title="Scroll the FAQ's">
+    <ion-content class="background2" scroll="true">
+        <div data-ng-controller="ExampleController">
+          <div class="card-dark">
+            <div class="item card-postlist item-text-wrap">
+              <div class="card">
+                <div class="item item-text-wrap">
+                <h1>TribalPosts</h1>
+                <hr>
+                  <ul id="list-posts">
+                  List
+                  <li>
+                  <h3> </h3>
+                  </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="item tabs tabs-secondary tabs-icon-left">
               <a class="tab-item" href="#/tab/browse">
               <i class="icon ion-thumbsup"></i>
-              Values
+              Browse
               </a>
+
               <a class="tab-item" href="#/tab/facts">
               <i class="icon ion-chatbox"></i>
               TribalPost
               </a>
+
               <a class="tab-item" href="#/tab/facts2">
               <i class="icon ion-share"></i>
               OneVoice
               </a>
-          </div>
-        </div>
-        </ion-list>
-
-
-      </ion-content>
-    </ion-view>
-  </script>
-
-  <script id="templates/facts.html" type="text/ng-template">
-  <ion-view view-title="Scroll the FAQ's">
-    <ion-content class="background2" scroll="true">
-    <div data-ng-controller="ExampleController">
-      <div class="card-dark">
-        <div class="item card-postlist item-text-wrap">
-          <div class="card">
-            <div class="item item-text-wrap">
-                <h1>Recent TribalPosts</h1>
-                <hr>
-                <ul id="list-posts">
-                List
-                <li>
-                <h3> </h3>
-                </li>
-                </ul>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card">
-      <div class="item tabs tabs-secondary tabs-icon-left">
-          <a class="tab-item" href="#/tab/browse">
-          <i class="icon ion-thumbsup"></i>
-          Browse
-          </a>
-          <a class="tab-item" href="#/tab/facts">
-          <i class="icon ion-chatbox"></i>
-          TribalPost
-          </a>
-          <a class="tab-item" href="#/tab/facts2">
-          <i class="icon ion-share"></i>
-          OneVoice
-          </a>
-      </div>
-      </div>
-      </div>
-
-      </ion-content>
-    </ion-view>
-  </script>
+    </ion-content>
+  </ion-view>
+</script>
 
   <script id="templates/facts2.html" type="text/ng-template">
   <ion-view view-title="Post your FAQ">
@@ -315,7 +309,5 @@
       </ion-content>
     </ion-view>
   </script>
-
 </body>
-
 </html>

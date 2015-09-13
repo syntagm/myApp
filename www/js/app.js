@@ -3,13 +3,18 @@
 var example = angular.module('ionicApp', ['ionic'])
 
 .config(function($stateProvider, $urlRouterProvider) {
-
+    // Ionic uses AngularUI Router which uses the concept of states
+    // Learn more here: https://github.com/angular-ui/ui-router
+    // Set up the various states which the app can be in.
+    // Each state's controller can be found in controllers.js
   $stateProvider
+
     .state('tabs', {
       url: "/tab",
       abstract: true,
       templateUrl: "templates/tabs.html"
-    })
+     })
+
     .state('tabs.home', {
       url: "/home",
       views: {
@@ -19,6 +24,7 @@ var example = angular.module('ionicApp', ['ionic'])
         }
       }
     })
+
     .state('tabs.facts', {
       url: "/facts",
       views: {
@@ -27,6 +33,7 @@ var example = angular.module('ionicApp', ['ionic'])
         }
       }
     })
+
     .state('tabs.facts2', {
       url: "/facts2",
       views: {
@@ -35,6 +42,7 @@ var example = angular.module('ionicApp', ['ionic'])
         }
       }
     })
+
     .state('tabs.about', {
       url: "/about",
       views: {
@@ -43,6 +51,7 @@ var example = angular.module('ionicApp', ['ionic'])
         }
       }
     })
+
     .state('tabs.browse', {
       url: "/browse",
       views: {

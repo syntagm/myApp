@@ -62,14 +62,15 @@
 
         .card-blue .item{
               background: #000140;
-              opacity: 0.90;
-              filter: alpha(opacity=90); /* For IE8 and earlier */
+              opacity: 0.85;
+              filter: alpha(opacity=85); /* For IE8 and earlier */
               font-size: 2.5em;
               color: #ff0000;
               text-align: center;
               margin: auto;
-              width: 80%;
+              width: 85%;
               border-radius: 10px;
+              border-width: 0px;
             }
 
             img {
