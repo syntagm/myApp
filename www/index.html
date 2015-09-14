@@ -14,17 +14,8 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <script src="lib/ionic-service-core/ionic-core.js"></script>
-    <script src="lib/ionic-service-push/ionic-push.js"></script>
-    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
-
-    <script src="cordova.js"></script>
-
     <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
-
+    <script src="cordova.js"></script>
 </head>
 
 <body>
@@ -76,7 +67,7 @@
             </ul>
 
             <p>
-            <a href="templates/tabs.html" class="subdued">1 Like</a>
+            <a href="#" class="subdued">1 Like</a>
             <a href="#" class="subdued">2 Comments</a>
             </p>
           </div>
@@ -142,12 +133,6 @@
             </div>
           </div>
         </div>
-        <button class="button button-block button-dark" ng-click="identifyUser()">
-        Identify a user
-        </button>
-        <button class="button button-block button-positive" ng-if="identified" ng-click="pushRegister()">
-        Register for Push
-        </button>
     </ion-content>
   </ion-view>
 </script>
