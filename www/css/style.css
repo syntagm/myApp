@@ -80,3 +80,31 @@
 
         .slider { height: 100%; text-align: center }
         .scroll { height: 100% }
+
+
+
+
+        /* Empty. Add your own CSS if you like */
+
+        body, .ionic-body {
+        font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+        }
+
+        .tab-item {
+        font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+        }
+
+        input, button, select, textarea {
+        font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+        }
+
+        .roboto {
+        font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+        }
+        .roboto input {
+        font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+        }
