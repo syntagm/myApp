@@ -147,7 +147,7 @@ function getPosts() {
   var query = new Parse.Query(Post);
   query.find({
     success: function(results){
-      var output ="";
+      var output = "";
       for (var i in results){
           var title = results[i].get("title");
           var content = results[i].get("content");
@@ -171,14 +171,16 @@ $("#post-form").submit(function(event){
   event.preventDefault();
     var title = $("#post-title").val();
     var content = $("#post-content").val();
+    var user = Parse.User.current();
 
     var newPost = new Post();
     newPost.set("title", title);
     newPost.set("content", content);
+    newPost.set("content", user);
 
     newPost.save({
       success: function(){
-
+        getPosts();
       }, error: function(error){
           console.log("Error:" +error.message);
       }
