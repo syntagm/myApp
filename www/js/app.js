@@ -145,15 +145,33 @@ $("#signup").submit(function(event){
 
 function getPosts() {
   var query = new Parse.Query(Post);
+
+  query.include("user");
+
   query.find({
     success: function(results){
       var output = "";
       for (var i in results){
           var title = results[i].get("title");
           var content = results[i].get("content");
+          var user = results[i].get("user");
+          //var username = user.get("username");
+
+          console.log(results[i].get("file"));
+
+          var img = "";
+          if (results[i].get("file")) {
+              var file = results[i].get("file");
+              var url = file.url();
+              console.log("url:"+url);
+              img = "<img src='"+url+"'>";
+          }
+
           output += "<li>";
           output += "<h2>"+title+"</h2>";
+          //output += "<small>"+username+"</small>";
           output += "<p>"+content+"</p>";
+          output += img;
           output += "</li>";
           output += "<hr>";
           //console.log("Title:"+title)
@@ -176,15 +194,41 @@ $("#post-form").submit(function(event){
     var newPost = new Post();
     newPost.set("title", title);
     newPost.set("content", content);
-    newPost.set("content", user);
+    newPost.set("user", user);
 
-    newPost.save({
-      success: function(){
-        getPosts();
-      }, error: function(error){
-          console.log("Error:" +error.message);
-      }
-    });
+    //Get file
+    var fileElement = $("#post-file")[0];
+    var filePath = $("#post-file").val();
+    var fileName = filePath.split("\\").pop();
+
+    if (fileElement.files.length > 0) {
+      var file = fileElement.files[0];
+      var newFile = new Parse.File(fileName, file);
+      newFile.save({
+        success: function() {
+
+        }, error: function(file, error){
+          console.log("File Save Error");
+        }
+      }).then(function(theFile){
+          newPost.set("file", theFile);
+          newPost.save({
+            success: function(){
+              getPosts();
+            }, error: function(error){
+                console.log("Post Save with File Error:" +error.message);
+            }
+          });
+      });
+    } else {
+      newPost.save({
+        success: function(){
+          getPosts();
+        }, error: function(error){
+            console.log("Error:" +error.message);
+        }
+      });
+    }
   });
 });
 
