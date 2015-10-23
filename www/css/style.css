@@ -38,6 +38,17 @@
           border-radius: 10px;
         }
 
+        .card-smalldark .item{
+              background: white;
+              opacity: 0.80;
+              filter: alpha(opacity=80); /* For IE8 and earlier */
+              font-size: 0.5em;
+              text-align: center;
+              margin: auto;
+              width: 80%;
+              border-radius: 10px;
+            }
+
         .card-slider .item{
               background: white;
               opacity: 0.95;

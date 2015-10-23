@@ -1,6 +1,6 @@
 {
-  "name": "VikingPost",
-  "app_id": "a38d1662",
+  "name": "myApp",
+  "app_id": "",
   "browsers": [
     {
       "platform": "android",
