@@ -13,12 +13,13 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
     <script src="js/app.js"></script>
     <script src="cordova.js"></script>
 </head>
 
 <body>
-  <ion-nav-bar class="bar-assertive">
+  <ion-nav-bar class="bar-energized">
     <ion-nav-back-button>
     </ion-nav-back-button>
   </ion-nav-bar>
@@ -31,11 +32,11 @@
         <ion-nav-view name="home-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="LogIn" icon="ion-ios-information" href="#/tab/about">
+      <ion-tab title="LogIn" icon="ion-loop" href="#/tab/about">
         <ion-nav-view name="about-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Enterprises" icon="ion-ios-world" ui-sref="tabs.contact">
+      <ion-tab title="Learn" icon="ion-search" ui-sref="tabs.contact">
         <ion-nav-view name="contact-tab"></ion-nav-view>
       </ion-tab>
 
@@ -43,49 +44,44 @@
   </script>
 
 <script id="templates/home.html" type="text/ng-template">
-  <ion-view view-title="The BIG RED E">
+  <ion-view view-title="Take-a-Shelfie">
     <ion-content class="background" scroll="true">
     </br>
         <div class="list card-blue">
           <div class="item item-avatar">
           <img src="avatar.png">
             <div class="item item-text-wrap">
-            <h2><span style="color:red; font-size: 1.5em">This is a BOLD new Enterprise</span></h2>
+            <h2><span style="color:yellow; font-size: 1.5em">Crowdsourced Shelf Management</span></h2>
             </div>
           </div>
 
           <div class="item item-body">
-          <img class="full-image" src="img/tribe 0.jpg"></br></br>
+          <img class="full-image" src="img/TaS1.png"></br></br>
             <ul class="list">
             <li class="item">
-            <h3><span style="color:white">That is how we roll -  by navigating around.</span></h3>
+            <h2><span style="color:white; font-size: 1.5em">To get here you tapped a NFC tag. Great!</span></h2>
             </li><br>
             <li class="item">
-            <h3><span style="color:white">First sign-up and there-after log-in to be able to add your voice.</span></h3>
-            <h3><span style="color:white">If you haven't logged out you don't need to log in again.</span></h3>
+            <h3><span style="color:white; font-size: 1.5em">To Log-In type in test1 next to UserName.</span></h3>
+            <h3><span style="color:white; font-size: 1.5em">The password today is 123456</span></h3>
             </li>
             </ul>
-            
-            <p>
-            <a href="#" class="subdued">12 Likes</a>
-            <a href="#" class="subdued">3 new Comments</a>
-            </p>
           </div>
 
           <div class="item tabs tabs-light tabs-icon-left">
             <a class="tab-item" href="#/tab/browse">
             <i class="icon ion-thumbsup"></i>
-            E|Do
+            DO
             </a>
 
             <a class="tab-item" href="#/tab/facts">
             <i class="icon ion-chatbox"></i>
-            E|Talk
+            READ
             </a>
 
             <a class="tab-item" href="#/tab/facts2">
             <i class="icon ion-share"></i>
-            E|Voice
+            REPORT
             </a>
           </div>
         </div>
@@ -95,7 +91,7 @@
 </script>
 
 <script id="templates/facts.html" type="text/ng-template">
-  <ion-view view-title="Scroll the FAQ's">
+  <ion-view view-title="Scroll the Shelfie's">
     <ion-content class="background2" scroll="true">
         <div data-ng-controller="ExampleController">
           <div class="card-dark">
@@ -115,22 +111,22 @@
             </div>
           </div>
           <div class="card">
-            <div class="item tabs tabs-secondary tabs-icon-left">
-              <a class="tab-item" href="#/tab/browse">
-              <i class="icon ion-thumbsup"></i>
-              Browse
-              </a>
+          <div class="item tabs tabs-light tabs-icon-left">
+            <a class="tab-item" href="#/tab/browse">
+            <i class="icon ion-thumbsup"></i>
+            DO
+            </a>
 
-              <a class="tab-item" href="#/tab/facts">
-              <i class="icon ion-chatbox"></i>
-              E|Talk
-              </a>
+            <a class="tab-item" href="#/tab/facts">
+            <i class="icon ion-chatbox"></i>
+            READ
+            </a>
 
-              <a class="tab-item" href="#/tab/facts2">
-              <i class="icon ion-share"></i>
-              E|Voice
-              </a>
-            </div>
+            <a class="tab-item" href="#/tab/facts2">
+            <i class="icon ion-share"></i>
+            REPORT
+            </a>
+          </div>
           </div>
         </div>
     </ion-content>
@@ -138,7 +134,7 @@
 </script>
 
   <script id="templates/facts2.html" type="text/ng-template">
-  <ion-view view-title="Post your FAQ">
+  <ion-view view-title="Post your Shelfie">
     <ion-content class="background2" scroll="true">
     <div data-ng-controller="ExampleController">
       <div class="card-dark">
@@ -146,11 +142,11 @@
           <div class="card">
           <form id="post-form">
             <label class="item item-input ">
-              <span class="input-label">FAQ Title</span>
+              <span class="input-label">Shelfie Title</span>
               <input id="post-title" type="text">
             </label><br>
             <label class="item item-input ">
-              <span class="input-label">FAQ Content</span>
+              <span class="input-label">Shelfie Content</span>
               <input id="post-content" type="text">
             </label>
             <label class="item item-input ">
@@ -158,7 +154,7 @@
               <input id="post-file" type="file">
             </label>
             <br>
-            <button class="button button-assertive">
+            <button class="button button-energized">
             <input id="post-submit" type="submit">
             </button>
           </form>
@@ -170,18 +166,20 @@
       </div>
       <div class="card">
       <div class="item tabs tabs-light tabs-icon-left">
-          <a class="tab-item" href="#/tab/browse">
-          <i class="icon ion-thumbsup"></i>
-          E|Do
-          </a>
-          <a class="tab-item" href="#/tab/facts">
-          <i class="icon ion-chatbox"></i>
-          E|Talk
-          </a>
-          <a class="tab-item" href="#/tab/facts2">
-          <i class="icon ion-share"></i>
-          E|Voice
-          </a>
+        <a class="tab-item" href="#/tab/browse">
+        <i class="icon ion-thumbsup"></i>
+        DO
+        </a>
+
+        <a class="tab-item" href="#/tab/facts">
+        <i class="icon ion-chatbox"></i>
+        READ
+        </a>
+
+        <a class="tab-item" href="#/tab/facts2">
+        <i class="icon ion-share"></i>
+        REPORT
+        </a>
       </div>
       </div>
 
@@ -196,8 +194,8 @@
       <div class="card-dark">
           <div class="item card-red item-text-wrap">
             <h1>Login</h1>
-            <p>You only have to sign up the first time</p>
-            <p>If logged in your name will show up under the logout button</p>
+            <h2>Login as instructed and GO to REPORT - below right</h2>
+            <p></p>
             <br />
             <div><button id="logout">Log out HERE before leaving</button></div>
 
@@ -212,7 +210,7 @@
                 <span class="input-label">Password</span>
                 <input id="login-password" type="password">
               </label><br>
-              <button class="button button-stable">
+              <button class="button button-energized">
               <input id="login-submit" type="submit">
               </button>
             </form>
@@ -220,7 +218,7 @@
             </div>
             <br />
 
-          <div class="card-dark">
+          <!-- <div class="card-dark">
             <div class="item card-red item-text-wrap">
             <h1>SignUp</h1>
             <p>Choose a user name and password</p>
@@ -241,21 +239,23 @@
               </form>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="card">
         <div class="item tabs tabs-light tabs-icon-left">
-            <a class="tab-item" href="#/tab/browse">
-            <i class="icon ion-thumbsup"></i>
-            E|Do
-            </a>
-            <a class="tab-item" href="#/tab/facts">
-            <i class="icon ion-chatbox"></i>
-            E|Talk
-            </a>
-            <a class="tab-item" href="#/tab/facts2">
-            <i class="icon ion-share"></i>
-            E|voice
-            </a>
+          <a class="tab-item" href="#/tab/browse">
+          <i class="icon ion-thumbsup"></i>
+          DO
+          </a>
+
+          <a class="tab-item" href="#/tab/facts">
+          <i class="icon ion-chatbox"></i>
+          READ
+          </a>
+
+          <a class="tab-item" href="#/tab/facts2">
+          <i class="icon ion-share"></i>
+          REPORT
+          </a>
         </div>
         </div>
       </ion-content>
@@ -272,44 +272,45 @@
             <div class="item card-red item-text-wrap">
             <ion-slide-box pager-click="navSlide(index)">
                 <ion-slide>
-                    <img style="height: 100% width: 100%" src="img/young3.jpg">
+                    <img style="height: 100% width: 100%" src="img/TaS2.png">
                 </ion-slide>
                 <ion-slide>
-                    <img style="height: 100% width: 100%" src="img/young4.jpg">
+                    <img style="height: 100% width: 100%" src="img/TaS2.png">
                 </ion-slide>
                 <ion-slide>
-                    <img style="height: 100% width: 100%" src="img/young5.jpg">
+                    <img style="height: 100% width: 100%" src="img/TaS2.png">
                 </ion-slide>
                 <ion-slide>
-                    <img style="height: 100% width: 100%" src="img/young6.jpg">
+                    <img style="height: 100% width: 100%" src="img/TaS2.png">
                 </ion-slide>
             </ion-slide-box>
         </div></div></div>
+
       </ion-content>
     </ion-view>
   </script>
 
   <script id="templates/browse.html" type="text/ng-template">
-  <ion-view view-title="Browse">
+  <ion-view view-title="Read">
     <ion-content class="background2" scroll="true">
         <div data-ng-controller="SliderController">
           <div class="card-slider">
             <div class="item card-red item-text-wrap">
             <ion-slide-box pager-click="navSlide(index)">
                 <ion-slide>
-                    <img style="height: 100% width: 100%" src="img/tribe 1.jpg">
+                    <img style="height: 100% width: 100%" src="img/TaS2.png">
                 </ion-slide>
                 <ion-slide>
-                    <img style="height: 100% width: 100%" src="img/tribe 2.jpg">
+                    <img style="height: 100% width: 100%" src="img/TaS2.png">
                 </ion-slide>
                 <ion-slide>
-                    <img style="height: 100% width: 100%" src="img/tribe 3.jpg">
+                    <img style="height: 100% width: 100%" src="img/TaS2.png">
                 </ion-slide>
                 <ion-slide>
-                    <img style="height: 100% width: 100%" src="img/tribe 4.jpg">
+                    <img style="height: 100% width: 100%" src="img/TaS2.png">
                 </ion-slide>
                 <ion-slide>
-                    <img style="height: 100% width: 100%" src="img/tribe 5.jpg">
+                    <img style="height: 100% width: 100%" src="img/TaS2.png">
                 </ion-slide>
             </ion-slide-box>
         </div></div></div>
