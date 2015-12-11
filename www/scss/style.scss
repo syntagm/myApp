@@ -1,32 +1,55 @@
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*
-Template Name: eplie
-Author: Cosmin Cotor
-Author ThemeForest URL: http://themeforest.net/user/cosmincotor
-Author Website: http://pixek.com/
-Version: 1.1.3
-License: Commercial
-*/
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* SCSS */
 
-
-
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*//////////////////// Customized Framework CSS Rules Start                                                               */
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 body {
 	background: #333 url(../images/bg/bgPat-1.png) 0 0 repeat scroll;
 	color: #999;
 }
+html {
+  font-size: 16px;
+}
 p > a {
 	color: #ffdf50;
+  font-size: 20px;
 }
 a {
 	color: #ffdf50;
+  font-size: 16px;
+  line-height:20px;
 }
-h1, h2, h3, h4, h5, h6 {
+li {
+	color: #ffdf50;
+  font-size: 16px;
+  line-height:20px;
+}
+h1 {
 	font-weight: normal;
 	color: #fff;
+	font-size: 2rem;
+}
+h2 {
+	font-weight: normal;
+	color: #fff;
+	font-size: 1.75rem;
+}
+h3 {
+	font-weight: normal;
+	color: #fff;
+	font-size: 1.5rem;
+}
+h4 {
+	font-weight: normal;
+	color: #fff;
+	font-size: 1.25rem;
+}
+h5 {
+	font-weight: normal;
+	color: #fff;
+	font-size: 1.0rem;
+}
+h6 {
+	font-weight: normal;
+	color: #ffdf50;	
+	font-size: 0.75rem;
 }
 input[type="text"], input[type="password"] {
 	transition: background-color 0.3s;
@@ -199,6 +222,7 @@ tr:hover > td {
 	clear: both;
 	display: none;
 	background-color: #333;
+  color: #ffdf50;
 	padding-left: 0px;
 	margin: 0px;
 	position: absolute;
@@ -219,11 +243,12 @@ tr:hover > td {
 .mainMenuWrapper > li > a {
 	margin-left: 24px;
 	background: url(../images/skins/default/mainMenuItemBg.png) 0 0 no-repeat;
-	color: #999;
+	color: #ffdf50;
 	padding-left: 16px;
 }
 .mainMenuWrapper > li > a:hover {
 	text-decoration: none;
+  color: #ffdf50;
 }
 .mainMenuWrapper > li:hover > a {
 }
@@ -1322,14 +1347,24 @@ input.fieldHasError, textarea.fieldHasError {
 	background: none;
 }
 
-/* Hide for Logged in/out */
-body.logged-in .hide-if-logged-in {
-  display: none; }
 
-body:not(.logged-in) .hide-if-not-logged-in {
-  display: none; }
-
-/*# sourceMappingURL=style.css.map */
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////// Reset CSS Rules End                                                                                */
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+$header-height: 80px;
+
+.content {
+  max-width: 80%;
+  margin-left: 25px;
+  margin-right: auto;
+  margin-top: $header-height;
+}
+
+/* Hide for Logged in/out */
+body.logged-in .hide-if-logged-in {
+    display: none;
+}
+
+body:not(.logged-in) .hide-if-not-logged-in {
+    display: none;
+}
